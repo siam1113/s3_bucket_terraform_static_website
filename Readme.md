@@ -26,7 +26,7 @@
 
     ```hcl
       resource "aws_s3_bucket" "<resource_name>" {
-      bucket = "bucket_name"
+      bucket = "your_bucket_name"
       }
     ```
 
@@ -47,7 +47,7 @@
     ```hcl
         resource "aws_s3_bucket_public_access_block" "<resource_name>" {
 
-        bucket = aws_s3_bucket.s3-bucket-terraform-2023.id
+        bucket = aws_s3_bucket.your_bucket_name.id
 
         block_public_acls       = false
         block_public_policy     = false
@@ -108,6 +108,6 @@
     ```
 
 10. Run `terraform plan` to see the outcome and Run `terraform apply` to implement the plan
-11. Now if you login to your AWS account and navigate `S3 Bucket > Buckets` you will see the newly create bucket there
+11. Now if you login to your AWS account and navigate `S3 Bucket > Buckets` you will see the newly created bucket there
 12. Click on the bucket and Go to **Properties** and Scroll down to the bottom to **Static website hosting** section
 13. You will see the website endpoint there and by navigating to that endpoint you can visit your website
